@@ -8,6 +8,7 @@ class Index:
 <head><title>Server Manager</title></head>
 <body>
 	<ul>
+		<li><a href="%(url)s:8080" target="_blank">XBMC Remote</a></li>
 		<li><a href="%(url)s:5001" target="_blank">Downloads</a></li>
 		<li><a href="%(url)s:5002" target="_blank">Tv Shows</a></li>
 		<li><a href="%(url)s:5003" target="_blank">Movies</a></li>
@@ -19,7 +20,7 @@ class Index:
 </html>""" % {"url": cherrypy.request.base}
 	index.exposed = True
 	def shutdown(self):
-		subprocess.call(['/home/rwood/ServerInstall/shutdown.sh'])
+		subprocess.call(['./shutdown.sh'])
 		return """<html>
 <head><title>Server Manager</title></head>
 <body>
