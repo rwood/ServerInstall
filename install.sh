@@ -63,7 +63,6 @@ sed -i "s/NEWS_USER/$NEWS_USER/g" /home/$USER/.sabnzbd/sabnzbd.ini
 sed -i "s/NEWS_PASS/$NEWS_PASS/g" /home/$USER/.sabnzbd/sabnzbd.ini
 sed -i "s/NZB_USER/$NZB_USER/g" /home/$USER/.sabnzbd/sabnzbd.ini
 sed -i "s/NZB_API/$NZB_API/g" /home/$USER/.sabnzbd/sabnzbd.ini
-sed -i "s/SAB_API_KEY/$SAB_API_KEY/g" /home/$USER/.sabnzbd/sabnzbd.ini
 
 echo "Installing sickbeard...."
 git clone git://github.com/midgetspy/Sick-Beard.git /home/$USER/.sickbeard
@@ -79,7 +78,6 @@ sed -i "s/8081/5002/g" /home/$USER/.sickbeard/autoProcessTV/autoProcessTV.cfg
 cp configs/sickbeard.config.ini /home/$USER/.sickbeard/config.ini
 sed -i "s/NZB_USER/$NZB_USER/g" /home/$USER/.sickbeard/config.ini
 sed -i "s/NZB_API/$NZB_API/g" /home/$USER/.sickbeard/config.ini
-sed -i "s/SAB_API_KEY/$sab_api_key/g" /home/$USER/.sickbeard/config.ini
 
 echo "Installing couchpotato...."
 git clone git://github.com/RuudBurger/CouchPotatoServer.git /home/$USER/.couchpotato
@@ -94,7 +92,6 @@ cp configs/couchpotato.settings.conf /home/$USER/.couchpotato/settings.conf
 sed -i "s/USERNAME/$USER/g" /home/$USER/.couchpotato/settings.conf
 sed -i "s/NZB_USER/$NZB_USER/g" /home/$USER/.couchpotato/settings.conf
 sed -i "s/NZB_API/$NZB_API/g" /home/$USER/.couchpotato/settings.conf
-sed -i "s/SAB_API_KEY/$sab_api_key/g" /home/$USER/.couchpotato/settings.conf
 
 echo "Installing headphones...."
 git clone git://github.com/rembo10/headphones.git /home/$USER/.headphones
@@ -109,5 +106,4 @@ cp configs/headphones.config.ini /home/$USER/.headphones/config.ini
 sed -i "s/USERNAME/$USER/g" /home/$USER/.headphones/config.ini
 sed -i "s/NZB_USER/$NZB_USER/g" /home/$USER/.headphones/config.ini
 sed -i "s/NZB_API/$NZB_API/g" /home/$USER/.headphones/config.ini
-sed -i "s/SAB_API_KEY/$sab_api_key/g" /home/$USER/.headphones/config.ini
 
