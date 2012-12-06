@@ -13,7 +13,7 @@ class Index:
 		<li><a href="%(url)s:5003" target="_blank">Movies</a></li>
 		<li><a href="%(url)s:5004" target="_blank">Music</a></li>
 		<li><a href="http://www.nzbmatrix.com" target="_blank">Search for NZBs</a></li>
-		<li><a href="http://localhost/shutdown" onclick="return confirm('Are you sure?');">Shut down the server.</a></li>
+		<li><a href="%(url)s/shutdown" onclick="return confirm('Are you sure?');">Shut down the server.</a></li>
 	</ul>
 </body>
 </html>""" % {"url": cherrypy.request.base}
