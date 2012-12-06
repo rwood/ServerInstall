@@ -14,9 +14,16 @@ SAB_API_KEY=$(uuidgen | sed "s/-//g")
 echo "Updating Apt"
 sudo apt-get update
 echo "Installing apps."
-sudo apt-get install samba minidlna sabnzbdplus ffmpeg
+sudo apt-get install samba minidlna sabnzbdplus ffmpeg python-cherrypy
 
 echo "Configuring web site...."
+chmod +x MediaBase.py 
+sudo chown root shutdown.sh
+sudo chmod 4755 shutdown.sh
+sudo cp mediabase.init /etc/init.d/mediabase
+sudo chmod +x /etc/init.d/mediabase
+sudo sed -i "s,PATH_TO_APP,$PWD,g" /etc/init.d/mediabase
+sudo update-rc.d mediabase defaults
 
 echo "Creating content directories...."
 sudo mkdir /pub/
