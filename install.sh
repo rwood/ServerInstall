@@ -14,7 +14,10 @@ SAB_API_KEY=$(uuidgen | sed "s/-//g")
 echo "Updating Apt"
 sudo apt-get update
 echo "Installing apps."
-sudo apt-get install samba minidlna sabnzbdplus
+sudo apt-get install samba minidlna sabnzbdplus ffmpeg
+
+echo "Configuring web site...."
+
 echo "Creating content directories...."
 sudo mkdir /pub/
 sudo chown $USER:$USER /pub/
